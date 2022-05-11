@@ -4,7 +4,7 @@
 
 body {
     background-image: url("background_2.png") !important;
-    background-color: #002b36 !important;
+    background-color: #035e74 !important;  /*002b36*/
     background-size: 100% 100% !important;
     /* the following are for firefox 70 */
 	opacity:1;
@@ -45,7 +45,8 @@ div.needs_meta_left div.line,
 div.needs_head_left div.line,
 div.needs_footer_left span,
 div.needs_footer_right span,
-div.needs_side a{
+div.needs_side a,
+div.line span{
     text-shadow: none;
 }
 
@@ -77,4 +78,16 @@ table.needs_style_none {
 
 table.need code {
     color: #ffffff;
+}
+
+table.needs_style_discreet tr{
+    background-color: rgba(255, 255, 255, .04) !important;
+    box-shadow: None;
+}
+td.content{
+    padding: 0 10px !important;
+}
+
+p.plantuml {
+    margin: 0px 10px !important;
 }

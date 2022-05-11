@@ -42,21 +42,19 @@ extensions = [
 needs_types = [
     dict(directive="story", title="User Story", prefix="US_", color="#BFD8D2", style="node"),
     dict(directive="spec", title="Specification", prefix="SP_", color="#FEDCD2", style="node"),
-    dict(directive="test", title="Test Case", prefix="TC_", color="#DCB239", style="node")
+    dict(directive="test", title="Test Case", prefix="TC_", color="#DCB239", style="node"),
+    dict(directive="arch_sys", title="System Architecture", prefix="TC_", color="#DCB239", style="node"),
+    dict(directive="arch_comp", title="Component Architecture", prefix="TC_", color="#999999", style="node")
 ]
 
-needs_extra_options = ['linked_status']
-
-needs_services = {
-    'github-issues': {
-        'url': 'https://api.github.com/',
-        'need_type': 'spec',
-        'max_amount': 2,
-        'max_content_lines': 20,
-        'id_prefix': 'GH_ISSUE_'
+needs_layouts = {
+    'arch': {
+        'grid': 'content_footer',
+        'layout': {
+            'footer': ['**<<meta("title")>>** (id: *<<meta("id")>>* tags: <<meta("tags")>>)']
+        }
     }
 }
-
 
 
 needs_css = "modern.css"

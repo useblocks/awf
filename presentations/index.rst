@@ -5,8 +5,12 @@ Architecture without Frustration
 ================================
 
 .. revealjs-section::
-   :data-background-iframe: _static/dynamic_background/white_small_move.html
+   :data-background-iframe: _static/dynamic_background/colored_small_move.html
 
 
 .. include:: slides/slogan.rst
+.. include:: slides/structure.rst
+.. include:: slides/elements.rst
 .. include:: slides/thanks.rst
+
+
