@@ -3,7 +3,7 @@ or how to write Architecture documentation in an efficient way
 
 .. container:: small
 
-   Written for software arhcitects and software developers.
+   Written for software architects and software developers.
 
    Press **S** to open speaker notes view or **ESC** for slides overview.
 
