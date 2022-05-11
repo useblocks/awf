@@ -6,15 +6,15 @@ Thanks for your attention ...
 .. revealjs-break::
    :notitle:
 
-**... and see you on DWF's issue tracker :)**
+**... and see you on AWF's issue tracker :)**
 
 .. list-table::
    :header-rows: 0
 
    * - github
-     - `github.com/useblocks/dwf <https://github.com/useblocks/dwf>`_
+     - `github.com/useblocks/awf <https://github.com/useblocks/awf>`_
    * - This presentation
-     - `useblocks.com/dwf <https://useblocks.com/dwf>`_
+     - `useblocks.com/awf <https://useblocks.com/awf>`_
 
 Maintainer
 ~~~~~~~~~~

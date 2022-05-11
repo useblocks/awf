@@ -1,15 +1,15 @@
-or how to get a software developer to write documentation
----------------------------------------------------------
+or how to write Architecture documentation in an efficient way
+--------------------------------------------------------------
 
 .. container:: small
 
-   Written for software developers, software team leads and everybody who hates writing docs.
+   Written for software arhcitects and software developers.
 
    Press **S** to open speaker notes view or **ESC** for slides overview.
 
    Presentation can be freely used, forked and changed for meetups and co.
 
-   `useblocks.com/dwf <https://useblocks.com/dwf>`_
+   `useblocks.com/dwf <https://useblocks.com/awf>`_
 
 
 .. image:: /_static/creative_common.png
@@ -19,24 +19,3 @@ or how to get a software developer to write documentation
    Copyright: `useblocks GmbH <http://useblocks.com>`_
    License: Creative Common International 4.0 (presentation) & MIT (software)
    License: Creative Common International 4.0 (presentation) & MIT (software)
-
-.. revealjs-break::
-   :notitle:
-
-.. image:: /_static/documentation_diagram.png
-
-
-TOC
-~~~
-
-What will be discussed...
-
-What belongs to "Documentation"
-
-Why writing documentation frustrates us
-
-What is needed to keep motivation high enough
-
-How Sphinx and PlantUML supports developers
-
-Which Cloud Services save a lot of time
