@@ -142,8 +142,25 @@ With a more focused layout
       :layout: focus_l
       :style: discreet
 
-Example
--------
+
+Configuration
+-------------
+
+Configure need type to be an "Architecture" type.
+
+.. code-block:: python
+
+   needs_types = [
+       dict(directive="arch",
+            title="Architecture",
+            content= "plantuml"  # <- New option, default "sphinx"
+            prefix="AR_",
+            color="#BFD8D2",
+            style="node"),
+       ... ]
+
+Example data
+------------
 
 .. arch_comp:: User Management
    :id: COMP_USER
@@ -199,127 +216,4 @@ Example
       @enduml
 
 
-Configuration
--------------
 
-Configure need type to be an "Architecture" type.
-
-.. code-block:: python
-
-   needs_types = [
-       dict(directive="arch",
-            title="Architecture",
-            content= "plantuml"  # <- New option, default "sphinx"
-            prefix="AR_",
-            color="#BFD8D2",
-            style="node"),
-       ... ]
-
-Merging elements
-----------------
-
-New directive: need_arch
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block::
-
-   .. need_arch::
-      :filter: "my_shop" in tags
-
-      Order::user --> User::id
-
-Result
-~~~~~~
-
-.. uml::
-
-   @startuml
-
-       '' code from COMP_USER
-       class User {
-         int id
-         str name
-         str email
-         address
-         int age
-         activate()
-         notify()
-       }
-
-       class Address {
-         int id
-         str street
-         str city
-         str country
-       }
-
-       User::address -> Address::id
-
-       '' code from COMP_ORDER
-       class Order {
-         int id
-         products
-         user
-         delete()
-         accept()
-       }
-
-       class Product {
-         int id
-         str name
-         float price
-       }
-
-       Order::product -> Product::id : n:n
-
-       '' code from need_arch
-       Order::user --> User::id
-      @enduml
-
-Used PlantUML code
-~~~~~~~~~~~~~~~~~~
-
-.. code-block:: text
-
-   @startuml
-
-       '' code from COMP_USER
-       class User {
-         int id
-         str name
-         str email
-         address
-         int age
-         activate()
-         notify()
-       }
-
-       class Address {
-         int id
-         str street
-         str city
-         str country
-       }
-
-       User::address -> Address::id
-
-       '' code from COMP_ORDER
-       class Order {
-         int id
-         products
-         user
-         delete()
-         accept()
-       }
-
-       class Product {
-         int id
-         str name
-         float price
-       }
-
-       Order::product -> Product::id : n:n
-
-       '' code from need_arch
-       Order::user --> User::id
-  @enduml

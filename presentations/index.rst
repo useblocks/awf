@@ -11,6 +11,9 @@ Architecture without Frustration
 .. include:: slides/slogan.rst
 .. include:: slides/structure.rst
 .. include:: slides/elements.rst
+.. include:: slides/merging.rst
+.. include:: slides/integration.rst
+.. include:: slides/ideas.rst
 .. include:: slides/thanks.rst
 
 

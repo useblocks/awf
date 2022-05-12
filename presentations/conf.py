@@ -41,6 +41,7 @@ extensions = [
 
 needs_types = [
     dict(directive="story", title="User Story", prefix="US_", color="#BFD8D2", style="node"),
+    dict(directive="req", title="Requirement", prefix="R_", color="#DCB239", style="node"),
     dict(directive="spec", title="Specification", prefix="SP_", color="#FEDCD2", style="node"),
     dict(directive="test", title="Test Case", prefix="TC_", color="#DCB239", style="node"),
     dict(directive="arch_sys", title="System Architecture", prefix="TC_", color="#DCB239", style="node"),
