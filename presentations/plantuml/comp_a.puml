@@ -1,0 +1,20 @@
+@startuml
+    class User {
+     int id
+     str name
+     str email
+     address
+     int age
+     activate()
+     notify()
+    }
+
+    class Address {
+     int id
+     str street
+     str city
+     str country
+    }
+
+    User  o- "1..* "Address
+@enduml

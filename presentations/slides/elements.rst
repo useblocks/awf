@@ -1,8 +1,14 @@
 Architecture elements
 =====================
 
-Recap
------
+Note
+----
+
+This is just a concept!!
+Nothing from the following slides got yet implemented.
+
+Recap Sphinx-Needs
+------------------
 
 Need object
 ~~~~~~~~~~~
@@ -167,53 +173,18 @@ Example data
    :tags: my_shop
    :layout: arch
 
-   .. uml::
+   .. uml:: /plantuml/comp_a.puml
 
-      @startuml
-       class User {
-         int id
-         str name
-         str email
-         address
-         int age
-         activate()
-         notify()
-       }
-
-       class Address {
-         int id
-         str street
-         str city
-         str country
-       }
-
-       User::address -> Address::id
-      @enduml
 
 .. arch_comp:: Order System
    :id: COMP_ORDER
    :tags: my_shop
    :layout: arch
 
-   .. uml::
+   .. uml:: /plantuml/comp_b.puml
 
-      @startuml
-       class Order {
-         int id
-         products
-         user
-         delete()
-         accept()
-       }
 
-       class Product {
-         int id
-         str name
-         float price
-       }
 
-       Order::product -> Product::id : n:n
-      @enduml
 
 
 

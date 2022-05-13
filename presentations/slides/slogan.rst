@@ -9,7 +9,11 @@ or how to write Architecture documentation in an efficient way
 
    Presentation can be freely used, forked and changed for meetups and co.
 
-   `useblocks.com/dwf <https://useblocks.com/awf>`_
+`useblocks.com/awf <https://useblocks.com/awf>`_
+
+.. container:: small
+
+   Also available Documentation without Frustration: `useblocks.com/dwf <https://useblocks.com/dwf>`_
 
 
 .. image:: /_static/creative_common.png

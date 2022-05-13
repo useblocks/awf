@@ -21,7 +21,7 @@ Connect PlantUML objects by there names. E.g comp_a_1.3 --> comb_b_1.3.
       {{COMP_SHOP}}
       {{REQ_001}}
 
-      Order::user --> User::id
+      Order::user o-- User::id
       REQ_001 ..> User
 
 "Normal" objects 2/2
@@ -38,46 +38,15 @@ Connect PlantUML objects by there names. E.g comp_a_1.3 --> comb_b_1.3.
            allow_mixing
 
            '' code from COMP_USER
-           class User {
-             int id
-             str name
-             str email
-             address
-             int age
-             activate()
-             notify()
-           }
-
-           class Address {
-             int id
-             str street
-             str city
-             str country
-           }
-
-           User::address -> Address::id
+           !include plantuml/comp_a.puml
 
            '' code from COMP_ORDER
-           class Order {
-             int id
-             products
-             user
-             delete()
-             accept()
-           }
-
-           class Product {
-             int id
-             str name
-             float price
-           }
-
-           Order::product -> Product::id : n:n
+           !include plantuml/comp_b.puml
 
            node "My Requirement" as REQ_001 #DCB239
 
            '' code from need_arch
-           Order::user --> User::id
+           Order::user o-- User::id
            REQ_001 ..> User
 
           @enduml
@@ -97,48 +66,17 @@ Container
 
            package COMP_USER <<Rectangle>> {
 
-               class User {
-                 int id
-                 str name
-                 str email
-                 address
-                 int age
-                 activate()
-                 notify()
-               }
-
-               class Address {
-                 int id
-                 str street
-                 str city
-                 str country
-               }
-
-               User::address -> Address::id
+               !include plantuml/comp_a.puml
            }
 
            '' code from COMP_ORDER
 
            package COMP_ORDER <<Rectangle>> {
-               class Order {
-                 int id
-                 products
-                 user
-                 delete()
-                 accept()
-               }
-
-               class Product {
-                 int id
-                 str name
-                 float price
-               }
-
-               Order::product -> Product::id : n:n
+               !include plantuml/comp_b.puml
            }
 
            '' code from need_arch
-           Order::user --> User::id
+           Order::user o-left- User::id
 
           @enduml
 
@@ -146,3 +84,4 @@ Container
 
    | Activated by setting need-option ``show_container``.
    | Maybe also with selected meta-data.
+

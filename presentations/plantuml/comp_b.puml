@@ -1,0 +1,17 @@
+@startuml
+    class Order {
+     int id
+     products
+     user
+     delete()
+     accept()
+    }
+
+    class Product {
+     int id
+     str name
+     float price
+    }
+
+    Order o- "1..*" Product
+@enduml

@@ -9,7 +9,7 @@ New directive: need_arch
    .. need_arch::
       :filter: "my_shop" in tags
 
-      Order::user --> User::id
+      Order::user o-- User::id
 
 Result
 ~~~~~~
@@ -19,44 +19,13 @@ Result
    @startuml
 
        '' code from COMP_USER
-       class User {
-         int id
-         str name
-         str email
-         address
-         int age
-         activate()
-         notify()
-       }
-
-       class Address {
-         int id
-         str street
-         str city
-         str country
-       }
-
-       User::address -> Address::id
+       !include plantuml/comp_a.puml
 
        '' code from COMP_ORDER
-       class Order {
-         int id
-         products
-         user
-         delete()
-         accept()
-       }
-
-       class Product {
-         int id
-         str name
-         float price
-       }
-
-       Order::product -> Product::id : n:n
+       !include plantuml/comp_b.puml
 
        '' code from need_arch
-       Order::user --> User::id
+       Order::user o-- User::id
       @enduml
 
 Used PlantUML code
@@ -84,7 +53,7 @@ Used PlantUML code
          str country
        }
 
-       User::address -> Address::id
+       User  o-right- "1..* "Address
 
        '' code from COMP_ORDER
        class Order {
@@ -101,8 +70,8 @@ Used PlantUML code
          float price
        }
 
-       Order::product -> Product::id : n:n
+       Order o-right- "1..*" Product
 
        '' code from need_arch
-       Order::user --> User::id
+       Order::user o-- User::id
   @enduml
