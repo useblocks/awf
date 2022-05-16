@@ -91,6 +91,46 @@ Flowcharts
 Idea
 ----
 
+.. uml::
+
+   @startuml
+   node "Need object: Component X" #ffcc00 {
+        card metadata as m1 #00ffcc
+        card "diagram/plantuml X" as d1
+   }
+
+   node "Need object: Component Y" #ffcc00 {
+        card metadata as m2 #00ffcc
+        card "diagram/plantuml Y" as d2
+   }
+
+
+   card "Diagram: View A" as dia #00ccff{
+        card "diagram/plantuml X" as d3
+        card "diagram/plantuml Y" as d4
+        d3 <-> d4
+   }
+
+   node "Need object: System A" as sys #ffcc00 {
+        card metadata as m3 #00ffcc
+        card "diagram/plantuml X" as d5
+        card "diagram/plantuml Y" as d6
+        d5 <-> d6
+   }
+
+   d1 ..> d3 : copy / reference
+   d2 ..> d4 : copy / reference
+
+   dia ..> sys
+
+   @enduml
+
+
+Details
+~~~~~~~
+
+
+
 Sphinx-Needs objects contain a single PlantUML diagram only.
 
 .. code-block:: rst
