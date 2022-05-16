@@ -85,3 +85,48 @@ Container
    | Activated by setting need-option ``show_container``.
    | Maybe also with selected meta-data.
 
+
+Variant Management
+~~~~~~~~~~~~~~~~~~
+
+.. code-block::
+
+   .. arch_sys:: System X
+      :id: SYS_X
+      :status: open
+      :tags: system, x
+
+      {% if "variant_b" in sphinx.tags %}
+
+        {{COMP_USER_B}}
+
+      {% else %}
+
+        {{COMP_USER_COMMON}}
+
+      {% endif %}
+
+      {{COMP_SHOP}}
+
+      Order::user --> User::id
+
+Supported via `Jinja <https://jinja.palletsprojects.com/en>`_.
+Can control integration but also PlantUML diagram content
+
+Spinoff: needs-uml combination
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block::
+
+   .. needsuml::
+
+        card "{{ needs["REQ_001"].title}}" as parent
+
+        {% for need in needs["REQ_001"].links %}
+
+            card {{ need.title}} as child_{{ loop.index }}
+            parent --> child_{{ loop.index }}
+
+        {% endfor %}
+
+Adds `Jinja <https://jinja.palletsprojects.com/en>`_ support around PlantUML-directive.
