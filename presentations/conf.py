@@ -30,7 +30,7 @@ author = 'team useblocks'
 # ones.
 extensions = [
     'sphinxcontrib.plantuml',
-    'sphinxcontrib.needs',
+    'sphinx_needs',
     'sphinx_revealjs',
     'sphinx.ext.mathjax',
     'sphinx.ext.autodoc',

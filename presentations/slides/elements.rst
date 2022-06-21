@@ -1,12 +1,6 @@
 Architecture elements
 =====================
 
-Note
-----
-
-This is just a concept!!
-Nothing from the following slides got yet implemented.
-
 Recap Sphinx-Needs
 ------------------
 
