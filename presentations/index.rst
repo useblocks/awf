@@ -12,6 +12,7 @@ Architecture without Frustration
 .. include:: slides/structure.rst
 .. include:: slides/needuml.rst
 .. include:: slides/arch_needs.rst
+.. include:: slides/needuml_extras.rst
 .. include:: slides/thanks.rst
 
 

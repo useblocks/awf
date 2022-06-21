@@ -41,6 +41,7 @@ An Arch Need 2/2
 
        For sure it's awesome.
 
+First ``needuml`` is used as "uml-like" representation
 
 Reusing Arch needs
 ~~~~~~~~~~~~~~~~~~
