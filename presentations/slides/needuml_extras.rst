@@ -24,7 +24,7 @@ Model parameters 1/4
 
           int --> func
 
-Model parameters 1/4
+Model parameters 2/4
 ~~~~~~~~~~~~~~~~~~~~
 
 .. arch_comp:: Component ???
