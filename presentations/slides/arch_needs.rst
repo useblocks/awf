@@ -115,7 +115,7 @@ Chaining Arch needs 3/4
 
           foo --> bar
 
-Chaining Arch needs 3/4
+Chaining Arch needs 4/4
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. arch_sys:: Product 42
