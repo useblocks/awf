@@ -79,3 +79,67 @@ Model parameters 4/4
 
       circle "Interface Y" as int_y
       int_y -> int
+
+Documenting Model parameters 1/2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: rst
+
+    .. arch_comp:: Component ???
+       :id: COMP_VAR2
+
+       .. needuml::
+
+          {% if variant == "A" %}
+          card "Interface A" as int
+          {% elif variant == "B" %}
+          card "Interface B" as int
+          {% else %}
+          card "Interface X" as int
+          {% endif %}
+
+          card "Function {{name}}" as func
+
+        **For Variant A**:
+
+       .. needuml::
+
+          {{uml('COMP_VAR', variant="A", name="Customer_A")}}
+
+
+       **For Variant B**:
+
+       .. needuml::
+
+          {{uml('COMP_VAR', variant="B", name="Customer_B")}}
+
+Documenting Model parameters 2/2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. arch_comp:: Component ???
+   :id: COMP_VAR2
+
+   .. needuml::
+
+      {% if variant == "A" %}
+      card "Interface A" as int
+      {% elif variant == "B" %}
+      card "Interface B" as int
+      {% else %}
+      card "Interface X" as int
+      {% endif %}
+
+      card "Function {{name}}" as func
+
+   **For Variant A**:
+
+   .. needuml::
+
+      {{uml('COMP_VAR', variant="A", name="Customer_A")}}
+
+
+   **For Variant B**:
+
+   .. needuml::
+
+      {{uml('COMP_VAR', variant="B", name="Customer_B")}}
