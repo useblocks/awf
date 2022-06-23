@@ -90,15 +90,19 @@ Documenting Model parameters 1/2
 
        .. needuml::
 
+          card "Function {{name}}" as func
+
           {% if variant == "A" %}
-          card "Interface A" as int
+          card "Interface A.1" as int
+          card "Interface A.2" as int_2
+          int_2 --> func
           {% elif variant == "B" %}
           card "Interface B" as int
           {% else %}
           card "Interface X" as int
           {% endif %}
 
-          card "Function {{name}}" as func
+          int -> func
 
         **For Variant A**:
 
@@ -121,25 +125,29 @@ Documenting Model parameters 2/2
 
    .. needuml::
 
+      card "Function {{name}}" as func
+
       {% if variant == "A" %}
-      card "Interface A" as int
+      card "Interface A.1" as int
+      card "Interface A.2" as int_2
+      int_2 --> func
       {% elif variant == "B" %}
       card "Interface B" as int
       {% else %}
       card "Interface X" as int
       {% endif %}
 
-      card "Function {{name}}" as func
+      int -> func
 
    **For Variant A**:
 
    .. needuml::
 
-      {{uml('COMP_VAR', variant="A", name="Customer_A")}}
+      {{uml('COMP_VAR2', variant="A", name="Customer_A")}}
 
 
    **For Variant B**:
 
    .. needuml::
 
-      {{uml('COMP_VAR', variant="B", name="Customer_B")}}
+      {{uml('COMP_VAR2', variant="B", name="Customer_B")}}
