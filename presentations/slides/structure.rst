@@ -1,6 +1,3 @@
-Documentation structure
-=======================
-
 arc42
 -----
 
