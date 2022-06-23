@@ -11,6 +11,21 @@ body {
 	z-index:1;
 }
 
+div.info {
+    font-size: 0.6em;
+    color: rgba(255,255,255, 0.5);
+    text-shadow: none !important;
+}
+
+div.info p {
+    text-shadow: none !important;
+}
+
+.ub-style {
+    font-weight: 600;
+    color: #ffcc00
+}
+
 table.need {
     margin-bottom: 10px;
 }
