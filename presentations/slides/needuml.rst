@@ -75,7 +75,7 @@ Like ``needflow``, but full control
 
       {% for need in needs %}
         {% if need.type == "req" %}
-            card "{{need.title}}" as {{need.id}}
+            {{need(need.id)}}
         {% endif %}
       {% endfor %}
 
