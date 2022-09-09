@@ -22,6 +22,9 @@ Store the final PlantUML code in a file.
 
 needuml - debug
 ~~~~~~~~~~~~~~~
+.. code-block:: rst
+
+   :debug:
 
 
 .. needuml::
