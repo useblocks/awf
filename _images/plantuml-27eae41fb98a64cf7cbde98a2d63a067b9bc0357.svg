@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="372px" preserveAspectRatio="none" style="width:240px;height:372px;background:#FFFFFF;" version="1.1" viewBox="0 0 240 372" width="240px" zoomAndPan="magnify"><defs/><g><!--MD5=[3fd616f346a44cd59a91eb10b19e157c]
+class User--><g id="elem_User"><rect codeLine="1" fill="#F1F1F1" height="162.0781" id="User" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="75" x="26.3491" y="203"/><ellipse cx="46.2991" cy="219" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M49.2679,224.6406 Q48.6898,224.9375 48.0491,225.0781 Q47.4085,225.2344 46.7054,225.2344 Q44.2054,225.2344 42.8773,223.5938 Q41.5648,221.9375 41.5648,218.8125 Q41.5648,215.6875 42.8773,214.0313 Q44.2054,212.375 46.7054,212.375 Q47.4085,212.375 48.0491,212.5313 Q48.7054,212.6875 49.2679,212.9844 L49.2679,215.7031 Q48.6429,215.125 48.0491,214.8594 Q47.4554,214.5781 46.8304,214.5781 Q45.4866,214.5781 44.7991,215.6563 Q44.1116,216.7188 44.1116,218.8125 Q44.1116,220.9063 44.7991,221.9844 Q45.4866,223.0469 46.8304,223.0469 Q47.4554,223.0469 48.0491,222.7813 Q48.6429,222.5 49.2679,221.9219 L49.2679,224.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="61.3991" y="223.8467">User</text><line style="stroke:#181818;stroke-width:0.5;" x1="27.3491" x2="100.3491" y1="235" y2="235"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33" x="32.3491" y="251.9951">int id</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="32.3491" y="268.292">str name</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="32.3491" y="284.5889">str email</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="32.3491" y="300.8857">address</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="32.3491" y="317.1826">int age</text><line style="stroke:#181818;stroke-width:0.5;" x1="27.3491" x2="100.3491" y1="324.4844" y2="324.4844"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="32.3491" y="341.4795">activate()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="32.3491" y="357.7764">notify()</text></g><!--MD5=[0f39e4cb6f03951afbf6d14bd2505654]
+class Address--><g id="elem_Address"><rect codeLine="11" fill="#F1F1F1" height="113.1875" id="Address" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="89" x="144.3491" y="227"/><ellipse cx="159.3491" cy="243" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M162.3179,248.6406 Q161.7398,248.9375 161.0991,249.0781 Q160.4585,249.2344 159.7554,249.2344 Q157.2554,249.2344 155.9273,247.5938 Q154.6148,245.9375 154.6148,242.8125 Q154.6148,239.6875 155.9273,238.0313 Q157.2554,236.375 159.7554,236.375 Q160.4585,236.375 161.0991,236.5313 Q161.7554,236.6875 162.3179,236.9844 L162.3179,239.7031 Q161.6929,239.125 161.0991,238.8594 Q160.5054,238.5781 159.8804,238.5781 Q158.5366,238.5781 157.8491,239.6563 Q157.1616,240.7188 157.1616,242.8125 Q157.1616,244.9063 157.8491,245.9844 Q158.5366,247.0469 159.8804,247.0469 Q160.5054,247.0469 161.0991,246.7813 Q161.6929,246.5 162.3179,245.9219 L162.3179,248.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="173.3491" y="247.8467">Address</text><line style="stroke:#181818;stroke-width:0.5;" x1="145.3491" x2="232.3491" y1="259" y2="259"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33" x="150.3491" y="275.9951">int id</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="150.3491" y="292.292">str street</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="150.3491" y="308.5889">str city</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="150.3491" y="324.8857">str country</text><line style="stroke:#181818;stroke-width:0.5;" x1="145.3491" x2="232.3491" y1="332.1875" y2="332.1875"/></g><!--MD5=[cf4d6237fcae255cd2e1656cf84a30e2]
+class Order--><g id="elem_Order"><rect codeLine="1" fill="#F1F1F1" height="129.4844" id="Order" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="74" x="27.8491" y="7"/><ellipse cx="44.1991" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M47.1679,28.6406 Q46.5898,28.9375 45.9491,29.0781 Q45.3085,29.2344 44.6054,29.2344 Q42.1054,29.2344 40.7773,27.5938 Q39.4648,25.9375 39.4648,22.8125 Q39.4648,19.6875 40.7773,18.0313 Q42.1054,16.375 44.6054,16.375 Q45.3085,16.375 45.9491,16.5313 Q46.6054,16.6875 47.1679,16.9844 L47.1679,19.7031 Q46.5429,19.125 45.9491,18.8594 Q45.3554,18.5781 44.7304,18.5781 Q43.3866,18.5781 42.6991,19.6563 Q42.0116,20.7188 42.0116,22.8125 Q42.0116,24.9063 42.6991,25.9844 Q43.3866,27.0469 44.7304,27.0469 Q45.3554,27.0469 45.9491,26.7813 Q46.5429,26.5 47.1679,25.9219 L47.1679,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="58.4991" y="27.8467">Order</text><line style="stroke:#181818;stroke-width:0.5;" x1="28.8491" x2="100.8491" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33" x="33.8491" y="55.9951">int id</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="33.8491" y="72.292">products</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="33.8491" y="88.5889">user</text><line style="stroke:#181818;stroke-width:0.5;" x1="28.8491" x2="100.8491" y1="95.8906" y2="95.8906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="33.8491" y="112.8857">delete()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="33.8491" y="129.1826">accept()</text></g><!--MD5=[72136138052d025cffdce3c22fbd185f]
+class Product--><g id="elem_Product"><rect codeLine="9" fill="#F1F1F1" height="96.8906" id="Product" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="86" x="144.8491" y="22.5"/><ellipse cx="159.8491" cy="38.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M162.8179,44.1406 Q162.2398,44.4375 161.5991,44.5781 Q160.9585,44.7344 160.2554,44.7344 Q157.7554,44.7344 156.4273,43.0938 Q155.1148,41.4375 155.1148,38.3125 Q155.1148,35.1875 156.4273,33.5313 Q157.7554,31.875 160.2554,31.875 Q160.9585,31.875 161.5991,32.0313 Q162.2554,32.1875 162.8179,32.4844 L162.8179,35.2031 Q162.1929,34.625 161.5991,34.3594 Q161.0054,34.0781 160.3804,34.0781 Q159.0366,34.0781 158.3491,35.1563 Q157.6616,36.2188 157.6616,38.3125 Q157.6616,40.4063 158.3491,41.4844 Q159.0366,42.5469 160.3804,42.5469 Q161.0054,42.5469 161.5991,42.2813 Q162.1929,42 162.8179,41.4219 L162.8179,44.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="173.8491" y="43.3467">Product</text><line style="stroke:#181818;stroke-width:0.5;" x1="145.8491" x2="229.8491" y1="54.5" y2="54.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33" x="150.8491" y="71.4951">int id</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="150.8491" y="87.792">str name</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="150.8491" y="104.0889">float price</text><line style="stroke:#181818;stroke-width:0.5;" x1="145.8491" x2="229.8491" y1="111.3906" y2="111.3906"/></g><!--MD5=[c5838101b3c45438f8850ad1fc969b69]
+reverse link User to Address--><g id="link_User_Address"><path codeLine="18" d="M122.8791,283.5 C129.9391,283.5 136.9891,283.5 144.0491,283.5 " fill="none" id="User-backto-Address" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="109.7491,283.5,115.7491,287.5,121.7491,283.5,115.7491,279.5,109.7491,283.5" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="109.2151" y="279.5554">1..*</text></g><!--MD5=[e9f19b7cb7fceb8a230391eb3c9865e3]
+reverse link Order to Product--><g id="link_Order_Product"><path codeLine="15" d="M123.2891,71 C130.4191,71 137.5491,71 144.6791,71 " fill="none" id="Order-backto-Product" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="110.0191,71,116.0191,75,122.0191,71,116.0191,67,110.0191,71" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="113.9912" y="67.0292">1..*</text></g><!--MD5=[e24aee972611f650b83da051c892251f]
+reverse link Order to User--><g id="link_Order_User"><path codeLine="9" d="M14.9691,88.6 C9.1991,99.11 19.6691,122.22 27.8491,139 C46.4091,177.06 83.2391,160.97 101.8491,199 C111.3291,218.37 124.4091,247.5 102.8491,247.5 " fill="none" id="Order-backto-User" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="26.8491,83,19.7152,81.9476,16,88.128,23.1339,89.1804,26.8491,83" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a1345c511b872062b07cbeb2e5ab22a8]
+@startuml
+
+    '' code from COMP_USER
+    !include plantuml/comp_a.puml
+
+    '' code from COMP_ORDER
+    !include plantuml/comp_b.puml
+
+    '' code from need_arch
+    Order::user o- - User::id
+   @enduml
+
+@startuml
+
+    class User {
+     int id
+     str name
+     str email
+     address
+     int age
+     activate()
+     notify()
+    }
+
+    class Address {
+     int id
+     str street
+     str city
+     str country
+    }
+
+    User  o- "1..* "Address
+
+    class Order {
+     int id
+     products
+     user
+     delete()
+     accept()
+    }
+
+    class Product {
+     int id
+     str name
+     float price
+    }
+
+    Order o- "1..*" Product
+
+    Order::user o- - User::id
+   @enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 10:55:52 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

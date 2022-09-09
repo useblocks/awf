@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="390px" preserveAspectRatio="none" style="width:668px;height:390px;background:#FFFFFF;" version="1.1" viewBox="0 0 668 390" width="668px" zoomAndPan="magnify"><defs/><g><!--MD5=[bb5e3389ad2d771bbc2e2756aefe54f2]
+cluster Need object: Component X--><g id="cluster_Need object: Component X"><polygon fill="#FFCC00" points="17,16,27,6,322,6,322,74,312,84,17,84,17,16" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="312" x2="322" y1="16" y2="6"/><line style="stroke:#181818;stroke-width:1.0;" x1="17" x2="312" y1="16" y2="16"/><line style="stroke:#181818;stroke-width:1.0;" x1="312" x2="312" y1="16" y2="84"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="212" x="59.5" y="31.9951">Need object: Component X</text></g><!--MD5=[3cd786ba759550be4bc5622e258a921c]
+cluster Need object: Component Y--><g id="cluster_Need object: Component Y"><polygon fill="#FFCC00" points="346,16,356,6,651,6,651,74,641,84,346,84,346,16" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="641" x2="651" y1="16" y2="6"/><line style="stroke:#181818;stroke-width:1.0;" x1="346" x2="641" y1="16" y2="16"/><line style="stroke:#181818;stroke-width:1.0;" x1="641" x2="641" y1="16" y2="84"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="212" x="388.5" y="31.9951">Need object: Component Y</text></g><!--MD5=[a20562d15fd189b5f3b55513b387a064]
+cluster dia--><g id="cluster_dia"><rect fill="#00CCFF" height="89" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="406" x="16" y="141"/><line style="stroke:#181818;stroke-width:1.0;" x1="16" x2="422" y1="161.2969" y2="161.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="130" x="154" y="155.9951">Diagram: View A</text></g><!--MD5=[02c352770cea3b80c7379a4224c558f1]
+cluster sys--><g id="cluster_sys"><polygon fill="#FFCC00" points="16,289,26,279,543,279,543,363,533,373,16,373,16,289" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="533" x2="543" y1="289" y2="279"/><line style="stroke:#181818;stroke-width:1.0;" x1="16" x2="533" y1="289" y2="289"/><line style="stroke:#181818;stroke-width:1.0;" x1="533" x2="533" y1="289" y2="373"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="180" x="185.5" y="304.9951">Need object: System A</text></g><!--MD5=[15adceb85fc527a57e07a494368da6ff]
+entity m1--><g id="elem_m1"><rect fill="#00FFCC" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="85" x="220.5" y="46"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="230.5" y="61.9951">metadata</text></g><!--MD5=[dc3dcf69659c94983ed7931d3e6edf32]
+entity d1--><g id="elem_d1"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="152" x="33" y="46"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="43" y="61.9951">diagram/plantuml X</text></g><!--MD5=[a1e4de05db1fa466752eb150f91817e2]
+entity m2--><g id="elem_m2"><rect fill="#00FFCC" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="85" x="549.5" y="46"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="559.5" y="61.9951">metadata</text></g><!--MD5=[5c6d332a939c3bb48c959c8af4c214d7]
+entity d2--><g id="elem_d2"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="152" x="362" y="46"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="372" y="61.9951">diagram/plantuml Y</text></g><!--MD5=[93ad6d05a3022c2b6954e849f51872fc]
+entity d3--><g id="elem_d3"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="152" x="59" y="184"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="69" y="199.9951">diagram/plantuml X</text></g><!--MD5=[d118a62195c2905bd3cb426713f65bdb]
+entity d4--><g id="elem_d4"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="152" x="246" y="184"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="256" y="199.9951">diagram/plantuml Y</text></g><!--MD5=[ee516bbb789c3eb034e204434244eb47]
+entity m3--><g id="elem_m3"><rect fill="#00FFCC" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="85" x="59.5" y="327"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="69.5" y="342.9951">metadata</text></g><!--MD5=[03e7136dd2e96d71076660191f3b69dd]
+entity d5--><g id="elem_d5"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="152" x="180" y="327"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="190" y="342.9951">diagram/plantuml X</text></g><!--MD5=[3e3d8fad0660324dbfb3bcfdb65b8371]
+entity d6--><g id="elem_d6"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="152" x="367" y="327"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="377" y="342.9951">diagram/plantuml Y</text></g><!--MD5=[e3ac2de0ef9e50c409684fe5650d4220]
+link d3 to d4--><g id="link_d3_d4"><path d="M216.47,195 C224.6,195 232.73,195 240.86,195 " fill="none" id="d3-d4" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="245.92,195,236.92,191,240.92,195,236.92,199,245.92,195" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="211.33,195,220.33,199,216.33,195,220.33,191,211.33,195" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[af6e2492fd74499a7a42ebde97837231]
+link d5 to d6--><g id="link_d5_d6"><path d="M337.47,338 C345.6,338 353.73,338 361.86,338 " fill="none" id="d5-d6" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="366.92,338,357.92,334,361.92,338,357.92,342,366.92,338" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="332.33,338,341.33,342,337.33,338,341.33,334,332.33,338" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e59aaee165ab6dfe6b7dcc9ac1f88896]
+link d1 to d3--><g id="link_d1_d3"><path d="M110.95,68.22 C115.47,91.85 126.66,150.37 132.03,178.47 " fill="none" id="d1-to-d3" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="133.02,183.66,135.2474,174.0663,132.0752,178.7501,127.3915,175.5779,133.02,183.66" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="103" x="121" y="113.0669">copy / reference</text></g><!--MD5=[d61d57190fd9bbc0894a9077acee75fe]
+link d2 to d4--><g id="link_d2_d4"><path d="M429.28,68.22 C408.79,92.24 357.54,152.33 334.07,179.84 " fill="none" id="d2-to-d4" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="330.82,183.66,339.6971,179.3941,334.0587,179.8507,333.6021,174.2123,330.82,183.66" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="103" x="401" y="113.0669">copy / reference</text></g><!--MD5=[a452d2c18f2e2eb72b24af7f2562015a]
+link dia to sys--><g id="link_dia_sys"><path d="M24,230.4851 C24,230.7182 24,230.952 24,231.1866 C24,231.6556 24,232.1275 24,232.6021 C24,233.5513 24,234.5112 24,235.4809 C24,237.4202 24,239.3987 24,241.4085 C24,249.4476 24,257.9872 24,266.5263 C24,268.661 24,270.7957 24,272.9226 C24,273.986 24,275.0475 24,276.106 C24,276.6353 24,277.1638 24,277.6915 C24,277.9553 24,278.2189 24,278.4823 C24,278.614 24,278.7457 24,278.8772 " fill="none" id="dia-to-sys" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="24,278.8772,28,269.8772,24,273.8772,20,269.8772,24,278.8772" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[89aa5fac87aa2ab48fe2fb05bb8eded1]
+@startuml
+node "Need object: Component X" #ffcc00 {
+     card metadata as m1 #00ffcc
+     card "diagram/plantuml X" as d1
+}
+
+node "Need object: Component Y" #ffcc00 {
+     card metadata as m2 #00ffcc
+     card "diagram/plantuml Y" as d2
+}
+
+
+card "Diagram: View A" as dia #00ccff{
+     card "diagram/plantuml X" as d3
+     card "diagram/plantuml Y" as d4
+     d3 <-> d4
+}
+
+node "Need object: System A" as sys #ffcc00 {
+     card metadata as m3 #00ffcc
+     card "diagram/plantuml X" as d5
+     card "diagram/plantuml Y" as d6
+     d5 <-> d6
+}
+
+d1 ..> d3 : copy / reference
+d2 ..> d4 : copy / reference
+
+dia ..> sys
+
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 10:55:52 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="43px" preserveAspectRatio="none" style="width:136px;height:43px;background:#FFFFFF;" version="1.1" viewBox="0 0 136 43" width="136px" zoomAndPan="magnify"><defs/><g><!--MD5=[770389ab9df153645bc6ef28055eb2b5]
+entity A--><g id="elem_A"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="29" x="7" y="15.5659"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="9" x="17" y="31.561">A</text></g><!--MD5=[b2d39259b6aeabc16b394deeb0238426]
+entity B--><g id="elem_B"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="30" x="100.5" y="15.5659"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="10" x="110.5" y="31.561">B</text></g><!--MD5=[5e2eec62a50b26b6b0db6c12e4ee289c]
+link A to B--><g id="link_A_B"><path d="M36.19,26.5659 C52,26.5659 77.28,26.5659 95.04,26.5659 " fill="none" id="A-to-B" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="100.29,26.5659,91.29,22.5659,95.29,26.5659,91.29,30.5659,100.29,26.5659" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28" x="54.25" y="19.6328">links</text></g><!--MD5=[fd7157fb85b1dee2c196956d52153d7c]
+@startuml
+card A
+card B
+A -> B: links
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 10:55:52 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="151px" preserveAspectRatio="none" style="width:379px;height:151px;background:#FFFFFF;" version="1.1" viewBox="0 0 379 151" width="379px" zoomAndPan="magnify"><defs/><g><!--MD5=[f1b33bf9782741d4b11901b5f836f6d2]
+cluster Awesome package--><g id="cluster_Awesome package"><polygon points="16,16,26,6,241,6,241,124,231,134,16,134,16,16" style="stroke:#181818;stroke-width:1.0;fill:none;"/><line style="stroke:#181818;stroke-width:1.0;fill:none;" x1="231" x2="241" y1="16" y2="6"/><line style="stroke:#181818;stroke-width:1.0;fill:none;" x1="16" x2="231" y1="16" y2="16"/><line style="stroke:#181818;stroke-width:1.0;fill:none;" x1="231" x2="231" y1="16" y2="134"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="149" x="50" y="31.9951">Awesome package</text></g><!--MD5=[402ba07671be787cd9365df218d6bbfc]
+entity REQ_01--><g id="elem_REQ_01"><a href="../index.html#REQ_01" target="_top" title="../index.html#REQ_01" xlink:actuate="onRequest" xlink:href="../index.html#REQ_01" xlink:show="new" xlink:title="../index.html#REQ_01" xlink:type="simple"><polygon fill="#DCB239" points="58.5,56,68.5,46,223.5,46,223.5,107.9063,213.5,117.9063,58.5,117.9063,58.5,56" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="213.5" x2="223.5" y1="56" y2="46"/><line style="stroke:#181818;stroke-width:0.5;" x1="58.5" x2="213.5" y1="56" y2="56"/><line style="stroke:#181818;stroke-width:0.5;" x1="213.5" x2="213.5" y1="56" y2="117.9063"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="80" x="73.5" y="77.1387">Requirement</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="125" x="73.5" y="92.9639">My requirement</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="39" x="73.5" y="105.5479">REQ_01</text></a></g><!--MD5=[b0c076637fba280408a8bacf67612ce8]
+entity comp_x--><g id="elem_comp_x"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="115" x="258.5" y="71"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95" x="268.5" y="86.9951">Component X</text></g><!--MD5=[56750377cb68bf37dcd05cf3cba37464]
+link REQ_01 to comp_x--><g id="link_REQ_01_comp_x"><path d="M223.71,82 C233.54,82 243.36,82 253.18,82 " fill="none" id="REQ_01-to-comp_x" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="258.32,82,249.32,78,253.32,82,249.32,86,258.32,82" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[1d6e3bc45138f4823db32df3a6e35271]
+@startuml
+
+card "Component X" as comp_x
+
+node "Awesome package" {
+
+  
+      node "<size:12>Requirement</size>\n**My requirement**\n<size:10>REQ_01</size>" as REQ_01 [[../index.html#REQ_01]] #DCB239
+
+      REQ_01 -> comp_x
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+}
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 10:55:52 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

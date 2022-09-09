@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="166px" preserveAspectRatio="none" style="width:343px;height:166px;background:#FFFFFF;" version="1.1" viewBox="0 0 343 166" width="343px" zoomAndPan="magnify"><defs/><g><!--MD5=[df6df33380efce8d824e4ee1c9a49edf]
+entity COMP_BLUE--><g id="elem_COMP_BLUE"><a href="../index.html#COMP_BLUE" target="_top" title="../index.html#COMP_BLUE" xlink:actuate="onRequest" xlink:href="../index.html#COMP_BLUE" xlink:show="new" xlink:title="../index.html#COMP_BLUE" xlink:type="simple"><polygon fill="#999999" points="16,16,26,6,209,6,209,67.9063,199,77.9063,16,77.9063,16,16" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="199" x2="209" y1="16" y2="6"/><line style="stroke:#181818;stroke-width:0.5;" x1="16" x2="199" y1="16" y2="16"/><line style="stroke:#181818;stroke-width:0.5;" x1="199" x2="199" y1="16" y2="77.9063"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="153" x="31" y="37.1387">Component Architecture</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="130" x="31" y="52.9639">Component Blue</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="65" x="31" y="65.5479">COMP_BLUE</text></a></g><!--MD5=[0deaa3b5109ef6b9d77237e0dbc10fce]
+entity int_a--><g id="elem_int_a"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="93" x="244" y="31"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="254" y="46.9951">Interface A</text></g><!--MD5=[548e38777648744b016a1558a9aa3179]
+entity func_x--><g id="elem_func_x"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="93" x="244" y="138"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="254" y="153.9951">Function X</text></g><!--MD5=[cc2b7304a11f221c469cf7a279a52ebd]
+link int_a to func_x--><g id="link_int_a_func_x"><path d="M290.5,53.07 C290.5,71.52 290.5,110.87 290.5,132.67 " fill="none" id="int_a-to-func_x" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="290.5,137.81,294.5,128.81,290.5,132.81,286.5,128.81,290.5,137.81" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4e57363b0f6785cdfd0648b6bfa0b3e4]
+@startuml
+
+node "<size:12>Component Architecture</size>\n**Component Blue**\n<size:10>COMP_BLUE</size>" as COMP_BLUE [[../index.html#COMP_BLUE]] #999999
+
+card "Interface A" as int_a
+card "Function X" as func_x
+
+int_a - -> func_x
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 10:55:52 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

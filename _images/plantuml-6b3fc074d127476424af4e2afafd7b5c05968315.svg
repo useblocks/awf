@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="43px" preserveAspectRatio="none" style="width:149px;height:43px;background:#FFFFFF;" version="1.1" viewBox="0 0 149 43" width="149px" zoomAndPan="magnify"><defs/><g><!--MD5=[e70a2b30eb739f4bac4f1dd56868b82d]
+entity My requirement--><g id="elem_My requirement"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="128" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="17" y="22.9951">My requirement</text></g><!--MD5=[db5213f68a2d53493dd475526b33b7c1]
+@startuml
+
+card "My requirement"
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 10:55:52 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

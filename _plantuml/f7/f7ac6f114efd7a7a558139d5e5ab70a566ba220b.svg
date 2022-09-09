@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="183px" preserveAspectRatio="none" style="width:258px;height:183px;background:#FFFFFF;" version="1.1" viewBox="0 0 258 183" width="258px" zoomAndPan="magnify"><defs/><g><!--MD5=[db8cdea55f22f4c3b6ac5747c5fce350]
+cluster foo--><g id="cluster_foo"><polygon points="69.5,16,79.5,6,241.5,6,241.5,156,231.5,166,69.5,166,69.5,16" style="stroke:#181818;stroke-width:1.0;fill:none;"/><line style="stroke:#181818;stroke-width:1.0;fill:none;" x1="231.5" x2="241.5" y1="16" y2="6"/><line style="stroke:#181818;stroke-width:1.0;fill:none;" x1="69.5" x2="231.5" y1="16" y2="16"/><line style="stroke:#181818;stroke-width:1.0;fill:none;" x1="231.5" x2="231.5" y1="16" y2="166"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="96" x="103.5" y="31.9951">System FOO</text></g><!--MD5=[0deaa3b5109ef6b9d77237e0dbc10fce]
+entity int_a--><g id="elem_int_a"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="93" x="87" y="46"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="97" y="61.9951">Interface A</text></g><!--MD5=[548e38777648744b016a1558a9aa3179]
+entity func_x--><g id="elem_func_x"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="93" x="87" y="128"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="97" y="143.9951">Function X</text></g><!--MD5=[265452395c434bb34a0d6516332b9809]
+entity int_y--><g id="elem_int_y"><ellipse cx="42.5" cy="57" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="6" y="86.9951">Interface Y</text></g><!--MD5=[cc2b7304a11f221c469cf7a279a52ebd]
+link int_a to func_x--><g id="link_int_a_func_x"><path d="M133.5,68.13 C133.5,81.96 133.5,106.84 133.5,122.88 " fill="none" id="int_a-to-func_x" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="133.5,127.95,137.5,118.95,133.5,122.95,129.5,118.95,133.5,127.95" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[befc130ab87a5aaa3a836a96ad6474fb]
+link int_y to int_a--><g id="link_int_y_int_a"><path d="M51.74,57 C61.71,57 71.69,57 81.66,57 " fill="none" id="int_y-to-int_a" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="86.87,57,77.87,53,81.87,57,77.87,61,86.87,57" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c9cf63056ca98a870211e54034e50b08]
+@startuml
+
+node "System FOO" as foo {
+  card "Interface A" as int_a
+card "Function X" as func_x
+
+int_a - -> func_x
+}
+
+circle "Interface Y" as int_y
+
+int_y -> int_a
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 10:55:52 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

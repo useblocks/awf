@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="117px" preserveAspectRatio="none" style="width:322px;height:117px;background:#FFFFFF;" version="1.1" viewBox="0 0 322 117" width="322px" zoomAndPan="magnify"><defs/><g><!--MD5=[58b586ad9caebef2cfd75194b6a3785c]
+entity func--><g id="elem_func"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="168" x="148" y="89"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148" x="158" y="104.9951">Function Customer_A</text></g><!--MD5=[b1c884860531777bc081940d82065b2a]
+entity int--><g id="elem_int"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="106" x="7" y="89"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="17" y="104.9951">Interface A.1</text></g><!--MD5=[fca8ea16ce35930e443b766109d6ce04]
+entity int_2--><g id="elem_int_2"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="106" x="179" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="189" y="22.9951">Interface A.2</text></g><!--MD5=[21db1a09e9e207d9746b53925c30e514]
+link int_2 to func--><g id="link_int_2_func"><path codeLine="8" d="M232,29.13 C232,42.96 232,67.84 232,83.88 " fill="none" id="int_2-to-func" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="232,88.95,236,79.95,232,83.95,228,79.95,232,88.95" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[153d9f5a1618db04c87393d675819bbd]
+link int to func--><g id="link_int_func"><path codeLine="11" d="M113.08,100 C122.97,100 132.86,100 142.75,100 " fill="none" id="int-to-func" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="147.92,100,138.92,96,142.92,100,138.92,104,147.92,100" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4f718b69297873df6b4def5341a46be1]
+@startuml
+allowmixing
+
+card "Function Customer_A" as func
+
+
+card "Interface A.1" as int
+card "Interface A.2" as int_2
+int_2 - -> func
+
+
+int -> func
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 10:55:52 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

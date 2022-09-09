@@ -1,0 +1,965 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <title>Architecture without Frustration</title>
+    <link rel="stylesheet" type="text/css" href="_static/revealjs4/dist/reveal.css" />
+    <link rel="stylesheet" href="_static/revealjs4/dist/theme/moon.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/assets/jsonview.bundle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/libs/html/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/layouts.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/styles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/modern.css" />
+    <script src="_static/assets/jsonview.bundle.js"></script>
+    <script src="_static/assets/jsonview_loader.js"></script>
+    <script src="_static/sphinx-needs/libs/html/datatables.min.js"></script>
+    <script src="_static/sphinx-needs/libs/html/datatables_loader.js"></script>
+    <script src="_static/sphinx-needs/libs/html/sphinx_needs_collapse.js"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  </head><body>
+    <div class="reveal">
+        <div class="slides" role="main">
+            <section data-background-iframe="_static/dynamic_background/colored_small_move.html">
+<h1>Architecture without Frustration</h1>
+<div class="info docutils container">
+<p>Navigation: <span class="ub-style">←→</span> Chapters,  <span class="ub-style">↑↓</span> Details</p>
+</div>
+</section>
+<section >
+<h2>or how to write Architecture documentation in an efficient way</h2>
+<div class="small docutils container">
+<p>Written for software architects and software developers.</p>
+<p>Press <strong>S</strong> to open speaker notes view or <strong>ESC</strong> for slides overview.</p>
+<p>Presentation can be freely used, forked and changed for meetups and co.</p>
+</div>
+<p><a class="reference external" href="https://useblocks.com/awf">useblocks.com/awf</a></p>
+<div class="small docutils container">
+<p>Also available Documentation without Frustration: <a class="reference external" href="https://useblocks.com/dwf">useblocks.com/dwf</a></p>
+</div>
+<a class="reference external image-reference" href="http://creativecommons.org/licenses/by/4.0/"><img alt="_images/creative_common.png" src="_images/creative_common.png" /></a>
+</section>
+<section>
+<section >
+<h2>Needuml</h2>
+<p>Like <code class="docutils literal notranslate"><span class="pre">uml</span></code>-directive, but on steroid</p>
+</section>
+<section >
+<h3>Basic behavior</h3>
+<p>Behaves like PlantUML directive.</p>
+<pre data-id="basic-behavior"><code data-trim data-noescape class="rst">.. needuml::
+
+   card &quot;Basic element&quot;</code></pre>
+<p class="plantuml" id="needuml-index-0">
+<img src="_images/plantuml-749f845f35fccc50f01764cfa93ea1c32b0ab860.svg" alt="&#64;startuml
+
+card &quot;Basic element&quot;
+&#64;enduml
+"/></p>
+</section>
+<section >
+<h3>Programmable</h3>
+<p>Thanks to Jinja</p>
+<pre data-id="programmable"><code data-trim data-noescape class="rst">.. needuml::
+
+   {% for title in [&quot;Req A&quot;, &quot;Spec B&quot;]%}
+   card &quot;{{title}}&quot;
+   {% endfor %}</code></pre>
+<p class="plantuml" id="needuml-index-1">
+<img src="_images/plantuml-9c9c39d97bc0c5ee51366dd41f579c86e9646ca3.svg" alt="&#64;startuml
+
+
+card &quot;Req A&quot;
+
+card &quot;Spec B&quot;
+
+&#64;enduml
+"/></p>
+</section>
+<section >
+<h3>Data access</h3>
+<p>Has access to all Need data</p>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_none needs_type_req docutils align-default" id="REQ_01">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">My requirement</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_01" title="REQ_01">REQ_01</a></span>  <span class="needs collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="_images/arrow-down-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="_images/arrow-right-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span></span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"></td>
+</tr>
+</tbody>
+</table>
+<pre data-id="data-access"><code data-trim data-noescape class="rst">.. needuml::
+
+   card &quot;{{needs['REQ_01'].title }}&quot;</code></pre>
+<p class="plantuml" id="needuml-index-2">
+<img src="_images/plantuml-6b3fc074d127476424af4e2afafd7b5c05968315.svg" alt="&#64;startuml
+
+card &quot;My requirement&quot;
+&#64;enduml
+"/></p>
+</section>
+<section >
+<h3>Big brother</h3>
+<p>Like <code class="docutils literal notranslate"><span class="pre">needflow</span></code>, but full control</p>
+<pre data-id="big-brother"><code data-trim data-noescape class="rst">.. needuml::
+
+   {{flow('REQ_01')}}</code></pre>
+<p class="plantuml" id="needuml-index-3">
+<img src="_images/plantuml-f82273c02309fa19acc0ba681a969a0488dbb360.svg" alt="&#64;startuml
+
+node &quot;&lt;size:12&gt;Requirement&lt;/size&gt;\n**My requirement**\n&lt;size:10&gt;REQ_01&lt;/size&gt;&quot; as REQ_01 [[../index.html#REQ_01]] #DCB239
+
+&#64;enduml
+"/></p>
+<pre data-id="big-brother"><code data-trim data-noescape class="rst">.. needuml::
+
+   {% for need in needs %}
+     {% if need.type == &quot;req&quot; %}
+         {{flow(need.id)}}
+     {% endif %}
+   {% endfor %}</code></pre>
+</section>
+<section >
+<h3>Freedom</h3>
+<p>Combine manual and automatic data</p>
+<pre data-id="freedom"><code data-trim data-noescape class="rst">.. needuml::
+
+   card &quot;Component X&quot; as comp_x
+
+   node &quot;Awesome package&quot; {
+   {% for need in needs.values() %}
+     {% if need.type == &quot;req&quot; %}
+         card &quot;{{need.title}}&quot; as {{need.id}}
+         {{need.id}} --&gt; comp_x
+     {% endif %}
+   {% endfor %}
+   }</code></pre>
+<p class="plantuml" id="needuml-index-4">
+<img src="_images/plantuml-b4be724d300454ec13f1005850bf3f48797f5222.svg" alt="&#64;startuml
+
+card &quot;Component X&quot; as comp_x
+
+node &quot;Awesome package&quot; {
+
+  
+      node &quot;&lt;size:12&gt;Requirement&lt;/size&gt;\n**My requirement**\n&lt;size:10&gt;REQ_01&lt;/size&gt;&quot; as REQ_01 [[../index.html#REQ_01]] #DCB239
+
+      REQ_01 -&gt; comp_x
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+}
+&#64;enduml
+"/></p>
+</section>
+</section>
+<section>
+<section >
+<h2>Needuml Extras</h2>
+<p>There is more…</p>
+</section>
+<section >
+<h3>needuml - save</h3>
+<p>Store the final PlantUML code in a file.</p>
+<pre data-id="needuml-save"><code data-trim data-noescape class="default">.. needuml::
+   :save: /arch/system_x.puml
+
+   {{ flow(&quot;COMP_A&quot;) }}
+   {{ flow(&quot;COMP_B&quot;) }}
+
+   comp_a --&gt; comp_b</code></pre>
+<p><a class="reference external" href="https://sphinx-needs.readthedocs.io/en/latest/directives/needuml.html#save">Docs: needuml - save</a></p>
+</section>
+<section >
+<h3>needuml - debug</h3>
+<pre data-id="needuml-debug"><code data-trim data-noescape class="rst">:debug:</code></pre>
+<p class="plantuml" id="needuml-index-5">
+<img src="_images/plantuml-18f4befc93c9d356ba851660adce62a2590d08a3.svg" alt="&#64;startuml
+
+node &quot;&lt;size:12&gt;Requirement&lt;/size&gt;\n**My requirement**\n&lt;size:10&gt;REQ_01&lt;/size&gt;&quot; as REQ_01 [[../index.html#REQ_01]] #DCB239
+
+
+card &quot;charlie&quot; as ch
+REQ_01 --&gt; ch
+&#64;enduml
+"/></p>
+<pre>@startuml
+
+node &quot;&lt;size:12&gt;Requirement&lt;/size&gt;\n**My requirement**\n&lt;size:10&gt;REQ_01&lt;/size&gt;&quot; as REQ_01 [[../index.html#REQ_01]] #DCB239
+
+
+card &quot;charlie&quot; as ch
+REQ_01 --&gt; ch
+@enduml
+</pre><p><a class="reference external" href="https://sphinx-needs.readthedocs.io/en/latest/directives/needuml.html#debug">Docs: needuml - debug</a></p>
+</section>
+<section >
+<h3>needuml - filter</h3>
+<p>Filter by filter-strings.</p>
+<pre data-id="needuml-filter"><code data-trim data-noescape class="default">.. arch_comp:: My Component
+   :id: COMP_MY
+
+   .. needuml::
+
+      {% for need in filter(&quot;type=='interface' and status!='open'&quot;) %}
+         {{flow(need.id)}}
+      {% endfor %}</code></pre>
+<p><a class="reference external" href="https://sphinx-needs.readthedocs.io/en/latest/directives/needuml.html#filter-filter-string">Docs: needuml - filter</a></p>
+</section>
+</section>
+<section>
+<section >
+<h2>Architecture Needs</h2>
+<p>Need objects representing architecture elements</p>
+</section>
+<section >
+<h3>An Arch Need 1/2</h3>
+<p>Normal need, with <code class="docutils literal notranslate"><span class="pre">needarch</span></code></p>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_none needs_type_arch_comp docutils align-default" id="COMP_BLUE">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Component Architecture</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Component Blue</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#COMP_BLUE" title="COMP_BLUE">COMP_BLUE</a></span>  <span class="needs collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="_images/arrow-down-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="_images/arrow-right-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">open</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>This is component Blue!</p>
+<p class="plantuml" id="needarch-index-0">
+<img src="_images/plantuml-42fad80c26f6f4b259efdc19b06af21f39252ff7.svg" alt="&#64;startuml
+
+card &quot;Interface A&quot; as int_a
+card &quot;Function X&quot; as func_x
+
+int_a --&gt; func_x
+&#64;enduml
+"/></p>
+<p>For sure it’s awesome.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section >
+<h3>An Arch Need 2/2</h3>
+<pre data-id="an-arch-need-2-2"><code data-trim data-noescape class="rst">.. arch_comp:: Component Blue
+   :id: COMP_BLUE
+   :status: open
+
+   This is component Blue!
+
+   .. needarch::
+
+      card &quot;Interface A&quot; as int_a
+      card &quot;Function X&quot; as func_x
+
+      int_a --&gt; func_x
+
+   For sure it's awesome.</code></pre>
+<p>First <code class="docutils literal notranslate"><span class="pre">needuml</span></code> is used as “uml-like” representation</p>
+</section>
+<section >
+<h3>Reusing Arch needs</h3>
+<pre data-id="reusing-arch-needs"><code data-trim data-noescape class="rst">.. needuml::
+
+   {{flow('COMP_BLUE')}}
+   {{uml('COMP_BLUE')}}</code></pre>
+<p class="plantuml" id="needuml-index-6">
+<img src="_images/plantuml-a1f3f5444b825c75e6999700853320d8fe8d5950.svg" alt="&#64;startuml
+
+node &quot;&lt;size:12&gt;Component Architecture&lt;/size&gt;\n**Component Blue**\n&lt;size:10&gt;COMP_BLUE&lt;/size&gt;&quot; as COMP_BLUE [[../index.html#COMP_BLUE]] #999999
+
+card &quot;Interface A&quot; as int_a
+card &quot;Function X&quot; as func_x
+
+int_a --&gt; func_x
+&#64;enduml
+"/></p>
+</section>
+<section >
+<h3>Chaining Arch needs 1/4</h3>
+<pre data-id="chaining-arch-needs-1-4"><code data-trim data-noescape class="rst">.. arch_sys:: System Foo
+   :id: SYS_FOO
+   :status: open
+
+   This is system **Foo**
+
+   .. needarch::
+
+      node &quot;System FOO&quot; as foo {
+       {{uml(&quot;COMP_BLUE&quot;)}}
+      }
+
+      circle &quot;Interface Y&quot; as int_y
+
+      int_y -&gt; int_a</code></pre>
+</section>
+<section >
+<h3>Chaining Arch needs 2/4</h3>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_none needs_type_arch_sys docutils align-default" id="SYS_FOO">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">System Architecture</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">System Foo</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#SYS_FOO" title="SYS_FOO">SYS_FOO</a></span>  <span class="needs collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="_images/arrow-down-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="_images/arrow-right-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">open</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>This is system <strong>Foo</strong></p>
+<p class="plantuml" id="needarch-index-1">
+<img src="_images/plantuml-f7ac6f114efd7a7a558139d5e5ab70a566ba220b.svg" alt="&#64;startuml
+
+node &quot;System FOO&quot; as foo {
+  card &quot;Interface A&quot; as int_a
+card &quot;Function X&quot; as func_x
+
+int_a --&gt; func_x
+}
+
+circle &quot;Interface Y&quot; as int_y
+
+int_y -&gt; int_a
+&#64;enduml
+"/></p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section >
+<h3>Chaining Arch needs 3/4</h3>
+<pre data-id="chaining-arch-needs-3-4"><code data-trim data-noescape class="rst">.. arch_sys:: Product 42
+   :id: PROD_42
+   :status: open
+
+   .. needarch::
+
+      {{uml(&quot;SYS_FOO&quot;)}}
+      node &quot;System Bar&quot; as bar
+
+      foo --&gt; bar</code></pre>
+</section>
+<section >
+<h3>Chaining Arch needs 4/4</h3>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_none needs_type_arch_sys docutils align-default" id="PROD_42">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">System Architecture</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Product 42</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#PROD_42" title="PROD_42">PROD_42</a></span>  <span class="needs collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="_images/arrow-down-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="_images/arrow-right-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">open</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p class="plantuml" id="needarch-index-2">
+<img src="_images/plantuml-5df89737b64ff1e1b8e8da7d90b76fd42608d4e9.svg" alt="&#64;startuml
+
+node &quot;System FOO&quot; as foo {
+  card &quot;Interface A&quot; as int_a
+card &quot;Function X&quot; as func_x
+
+int_a --&gt; func_x
+}
+
+circle &quot;Interface Y&quot; as int_y
+
+int_y -&gt; int_a
+node &quot;System Bar&quot; as bar
+
+foo --&gt; bar
+&#64;enduml
+"/></p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section>
+<section >
+<h2>Needarch views</h2>
+<p>Different views for the same need</p>
+</section>
+<section >
+<h3>Needarch view 1/5</h3>
+<pre data-id="needarch-view-1-5"><code data-trim data-noescape class="rst">.. arch_comp:: Component X
+   :id: COMP_X
+
+   Sequence diagram
+
+   .. needarch::
+      :key: sequence
+
+      Foo --&gt; Bar: Hello
+
+   Flow chart
+
+   .. needarch::
+
+      card Foo</code></pre>
+</section>
+<section >
+<h3>Needarch view 2/5</h3>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_none needs_type_arch_comp docutils align-default" id="COMP_X">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Component Architecture</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Component X</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#COMP_X" title="COMP_X">COMP_X</a></span>  <span class="needs collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="_images/arrow-down-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="_images/arrow-right-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_sequence"><span class="needs_label">sequence: </span><span class="needs_data">Foo --&gt; Bar: Hello</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Sequence diagram</p>
+<p class="plantuml" id="needarch-index-3">
+<img src="_images/plantuml-7ee857a42feb945b93dd713d0cb60ec7b46f86a9.svg" alt="&#64;startuml
+
+Foo --&gt; Bar: Hello
+&#64;enduml
+"/></p>
+<p>Flow chart</p>
+<p class="plantuml" id="needarch-index-4">
+<img src="_images/plantuml-f0c9447e0b48eb79f4206b81fb6f421bb13c7d65.svg" alt="&#64;startuml
+
+card Foo
+database Bar
+Foo --&gt; Bar: Hello
+&#64;enduml
+"/></p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section >
+<h3>Needarch view 3/5</h3>
+<pre data-id="needarch-view-3-5"><code data-trim data-noescape class="rst">.. arch_sys:: System X
+   :id: SYS_X
+
+   Sequence diagram
+
+   .. needarch::
+
+      {{uml('COMP_X', 'sequence')}}
+
+      Bar --&gt; Foo: Hello again</code></pre>
+</section>
+<section >
+<h3>Needarch view 4/5</h3>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_none needs_type_arch_sys docutils align-default" id="SYS_X">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">System Architecture</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">System X</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#SYS_X" title="SYS_X">SYS_X</a></span>  <span class="needs collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="_images/arrow-down-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="_images/arrow-right-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span></span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Sequence diagram</p>
+<p class="plantuml" id="needarch-index-5">
+<img src="_images/plantuml-f5de48a6526808735a31f0088cca6fb01e25ef4d.svg" alt="&#64;startuml
+
+Foo --&gt; Bar: Hello
+
+Bar --&gt; Foo: Hello again
+&#64;enduml
+"/></p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section >
+<h3>Needarch view 5/5</h3>
+<pre data-id="needarch-view-5-5"><code data-trim data-noescape class="rst">{{uml('COMP_X')}}</code></pre>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_none needs_type_arch_sys docutils align-default" id="SYS_X-2">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">System Architecture</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">System X-2</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#SYS_X-2" title="SYS_X-2">SYS_X-2</a></span>  <span class="needs collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="_images/arrow-down-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="_images/arrow-right-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span></span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Sequence diagram</p>
+<p class="plantuml" id="needarch-index-6">
+<img src="_images/plantuml-d20252225c14facb2a926dbd13b7f0181880ba44.svg" alt="&#64;startuml
+
+card Foo
+database Bar
+Foo --&gt; Bar: Hello
+
+Bar --&gt; Foo: Hello again
+&#64;enduml
+"/></p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section>
+<section >
+<h2>Model parameters</h2>
+<p>One definition for custom use cases.</p>
+</section>
+<section >
+<h3>Model parameters 1/4</h3>
+<pre data-id="model-parameters-1-4"><code data-trim data-noescape class="rst">.. arch_comp:: Component ???
+   :id: COMP_VAR
+
+   .. needarch::
+
+      {% if variant == &quot;A&quot; %}
+      card &quot;Interface A&quot; as int
+      {% elif variant == &quot;B&quot; %}
+      card &quot;Interface B&quot; as int
+      {% else %}
+      card &quot;Interface X&quot; as int
+      {% endif %}
+
+      card &quot;Function {{name}}&quot; as func
+
+      int --&gt; func</code></pre>
+</section>
+<section >
+<h3>Model parameters 2/4</h3>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_none needs_type_arch_comp docutils align-default" id="COMP_VAR">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Component Architecture</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Component ???</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#COMP_VAR" title="COMP_VAR">COMP_VAR</a></span>  <span class="needs collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="_images/arrow-down-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="_images/arrow-right-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span></span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p class="plantuml" id="needarch-index-7">
+<img src="_images/plantuml-81129cad3f59222b5a6213fb57c366cfe4aed912.svg" alt="&#64;startuml
+
+
+card &quot;Interface X&quot; as int
+
+
+card &quot;Function &quot; as func
+
+int --&gt; func
+&#64;enduml
+"/></p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section >
+<h3>Model parameters 3/4</h3>
+<pre data-id="model-parameters-3-4"><code data-trim data-noescape class="rst">.. arch_sys:: System B
+   :id: SYS_B
+
+   This is system **B**
+
+   .. needarch::
+
+      node &quot;System B&quot; as sys_b {
+        {{uml(&quot;COMP_VAR&quot;, variant=&quot;B&quot;, name=&quot;SYS_B&quot;)}}
+      }
+
+      circle &quot;Interface Y&quot; as int_y
+      int_y -&gt; int</code></pre>
+</section>
+<section >
+<h3>Model parameters 4/4</h3>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_none needs_type_arch_sys docutils align-default" id="SYS_B">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">System Architecture</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">System B</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#SYS_B" title="SYS_B">SYS_B</a></span>  <span class="needs collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="_images/arrow-down-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="_images/arrow-right-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span></span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>This is system <strong>B</strong></p>
+<p class="plantuml" id="needarch-index-8">
+<img src="_images/plantuml-0a61e9c6314bd69c918dbc5a9d2a17b1be6d29db.svg" alt="&#64;startuml
+
+node &quot;System B&quot; as sys_b {
+  
+card &quot;Interface B&quot; as int
+
+
+card &quot;Function SYS_B&quot; as func
+
+int --&gt; func
+}
+
+circle &quot;Interface Y&quot; as int_y
+int_y -&gt; int
+&#64;enduml
+"/></p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section >
+<h3>Documenting Model parameters 1/2</h3>
+<pre data-id="documenting-model-parameters-1-2"><code data-trim data-noescape class="rst">.. arch_comp:: Component ???
+   :id: COMP_VAR2
+
+   .. needarch::
+
+      card &quot;Function {{name}}&quot; as func
+
+      {% if variant == &quot;A&quot; %}
+      card &quot;Interface A.1&quot; as int
+      card &quot;Interface A.2&quot; as int_2
+      int_2 --&gt; func
+      {% elif variant == &quot;B&quot; %}
+      card &quot;Interface B&quot; as int
+      {% else %}
+      card &quot;Interface X&quot; as int
+      {% endif %}
+
+      int -&gt; func
+
+    **For Variant A**:
+
+   .. needuml::
+
+      {{uml('COMP_VAR', variant=&quot;A&quot;, name=&quot;Customer_A&quot;)}}
+
+
+   **For Variant B**:
+
+   .. needuml::
+
+      {{uml('COMP_VAR', variant=&quot;B&quot;, name=&quot;Customer_B&quot;)}}</code></pre>
+</section>
+<section >
+<h3>Documenting Model parameters 2/2</h3>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_none needs_type_arch_comp docutils align-default" id="COMP_VAR2">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Component Architecture</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Component ???</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#COMP_VAR2" title="COMP_VAR2">COMP_VAR2</a></span>  <span class="needs collapse" id="target__show__meta"><span class="needs collapsed"><span><img alt="_images/arrow-down-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="_images/arrow-right-circle.svg" class="needs_image no-scaled-link" src="_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span></span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p class="plantuml" id="needarch-index-9">
+<img src="_images/plantuml-1bc45d3ed1f81dbe4adecc56dd21ed9e77794d2e.svg" alt="&#64;startuml
+
+card &quot;Function &quot; as func
+
+
+card &quot;Interface X&quot; as int
+
+
+int -&gt; func
+&#64;enduml
+"/></p>
+<p><strong>For Variant A</strong>:</p>
+<p class="plantuml" id="needuml-index-7">
+<img src="_images/plantuml-ce4d3067d0741cdbf3227a451c90aefc3cc06a9d.svg" alt="&#64;startuml
+
+card &quot;Function Customer_A&quot; as func
+
+
+card &quot;Interface A.1&quot; as int
+card &quot;Interface A.2&quot; as int_2
+int_2 --&gt; func
+
+
+int -&gt; func
+&#64;enduml
+"/></p>
+<p><strong>For Variant B</strong>:</p>
+<p class="plantuml" id="needuml-index-8">
+<img src="_images/plantuml-6b062af19ba5e83c701617c2192df2b00814db64.svg" alt="&#64;startuml
+
+card &quot;Function Customer_B&quot; as func
+
+
+card &quot;Interface B&quot; as int
+
+
+int -&gt; func
+&#64;enduml
+"/></p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section>
+<section >
+<h2>Upcoming</h2>
+</section>
+<section >
+<h3>needuml - import</h3>
+<p>Automatically use <code class="docutils literal notranslate"><span class="pre">uml()</span></code> for all links in given option.</p>
+<pre data-id="needuml-import"><code data-trim data-noescape class="default">.. arch_sys:: My System
+   :id: SYS_MY
+   :uses: COMP_A, COMP_B, COMP_X
+
+   .. needuml::
+
+      node &quot;My System&quot; as sys {
+         {{import(&quot;uses&quot;)}}
+      }</code></pre>
+</section>
+</section>
+<section>
+<section >
+<h2>Thanks for your attention …</h2>
+</section>
+<section >
+<p><strong>… and see you on AWF’s issue tracker :)</strong></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>github</p></td>
+<td><p><a class="reference external" href="https://github.com/useblocks/awf">github.com/useblocks/awf</a></p></td>
+</tr>
+<tr class="row-even"><td><p>This presentation</p></td>
+<td><p><a class="reference external" href="https://useblocks.com/awf">useblocks.com/awf</a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section >
+<h3>Maintainer</h3>
+<p><strong>Daniel Woste</strong></p>
+<a class="reference external image-reference" href="http://useblocks.com"><img alt="_images/daniel_woste.png" src="_images/daniel_woste.png" style="width: 128.0px; height: 128.0px;" /></a>
+<a class="reference external image-reference" href="http://useblocks.com"><img alt="_images/useblocks_logo.png" src="_images/useblocks_logo.png" style="width: 130.52px; height: 128.70000000000002px;" /></a>
+</section>
+<section >
+<h3>LICENSE</h3>
+<pre data-id="license"><code data-trim data-noescape class="txt">Presentation and Documentation
+==============================
+
+Creative Common 4.0 International
+
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Copyright (c) 2016-2017 useblocks GmbH
+
+Creative Commons Attribution 4.0 International Public License
+
+By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution 4.0 International Public License (&quot;Public License&quot;). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.
+
+Section 1 – Definitions.
+
+Adapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.
+Adapter's License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.
+Copyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.
+Effective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.
+Exceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.
+Licensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.
+Licensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.
+Licensor means the individual(s) or entity(ies) granting rights under this Public License.
+Share means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.
+Sui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.
+You means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.
+Section 2 – Scope.
+
+License grant.
+Subject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:
+reproduce and Share the Licensed Material, in whole or in part; and
+produce, reproduce, and Share Adapted Material.
+Exceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.
+Term. The term of this Public License is specified in Section 6(a).
+Media and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.
+Downstream recipients.
+Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.
+No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.
+No endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).
+Other rights.
+
+Moral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.
+Patent and trademark rights are not licensed under this Public License.
+To the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.
+Section 3 – License Conditions.
+
+Your exercise of the Licensed Rights is expressly made subject to the following conditions.
+
+Attribution.
+
+If You Share the Licensed Material (including in modified form), You must:
+
+retain the following if it is supplied by the Licensor with the Licensed Material:
+identification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);
+a copyright notice;
+a notice that refers to this Public License;
+a notice that refers to the disclaimer of warranties;
+a URI or hyperlink to the Licensed Material to the extent reasonably practicable;
+indicate if You modified the Licensed Material and retain an indication of any previous modifications; and
+indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.
+You may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.
+If requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.
+If You Share Adapted Material You produce, the Adapter's License You apply must not prevent recipients of the Adapted Material from complying with this Public License.
+Section 4 – Sui Generis Database Rights.
+
+Where the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:
+
+for the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;
+if You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material; and
+You must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.
+For the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.
+Section 5 – Disclaimer of Warranties and Limitation of Liability.
+
+Unless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.
+To the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.
+The disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.
+Section 6 – Term and Termination.
+
+This Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.
+Where Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:
+
+automatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or
+upon express reinstatement by the Licensor.
+For the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.
+For the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.
+Sections 1, 5, 6, 7, and 8 survive termination of this Public License.
+Section 7 – Other Terms and Conditions.
+
+The Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.
+Any arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.
+Section 8 – Interpretation.
+
+For the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.
+To the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.
+No term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.
+Nothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.
+
+Software
+========
+
+MIT License
+
+Copyright (c) 2016-2017 useblocks GmbH
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</code></pre>
+</section>
+</section>
+
+        </div>
+    </div>
+    
+    <script src="_static/revealjs4/dist/reveal.js"></script>
+    
+    
+      <script src="_static/revealjs4/plugin/notes/notes.js"></script>
+      
+    
+    <script>
+        var revealjsConfig = new Object();
+        Object.assign(revealjsConfig, 
+{
+    controls: true,
+    transition: 'slide',
+    progress: true,
+    history: true,
+    keyboard: true,
+    preloadIframes: true,
+}
+);
+        
+        
+        
+          revealjsConfig.plugins = [
+            RevealNotes,
+          ];
+        
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize(revealjsConfig);
+    </script>
+
+  </body>
+</html>

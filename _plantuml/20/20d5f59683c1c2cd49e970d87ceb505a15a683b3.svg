@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="35px" preserveAspectRatio="none" style="width:225px;height:35px;background:#FFFFFF;" version="1.1" viewBox="0 0 225 35" width="225px" zoomAndPan="magnify"><defs/><g><!--MD5=[b1c884860531777bc081940d82065b2a]
+entity int--><g id="elem_int"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="93" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="17" y="22.9951">Interface X</text></g><!--MD5=[58b586ad9caebef2cfd75194b6a3785c]
+entity func--><g id="elem_func"><rect fill="#F1F1F1" height="22.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="135.5" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="145.5" y="22.9951">Function</text></g><!--MD5=[aeb1fe01d6ada3ce2335e90267dac861]
+@startuml
+allowmixing
+
+
+card "Interface X" as int
+
+
+card "Function " as func
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 10:55:52 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
