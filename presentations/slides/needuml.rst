@@ -1,4 +1,4 @@
-needuml
+Needuml
 -------
 Like ``uml``-directive, but on steroid
 
@@ -63,11 +63,11 @@ Like ``needflow``, but full control
 
    .. needuml::
 
-      {{need('REQ_01')}}
+      {{flow('REQ_01')}}
 
 .. needuml::
 
-      {{need('REQ_01')}}
+      {{flow('REQ_01')}}
 
 .. code-block:: rst
 
@@ -75,7 +75,7 @@ Like ``needflow``, but full control
 
       {% for need in needs %}
         {% if need.type == "req" %}
-            {{need(need.id)}}
+            {{flow(need.id)}}
         {% endif %}
       {% endfor %}
 
@@ -105,7 +105,7 @@ Combine manual and automatic data
    node "Awesome package" {
    {% for obj in needs.values() %}
      {% if obj.type == "req" %}
-         {{need(obj.id)}}
+         {{flow(obj.id)}}
          {{obj.id}} -> comp_x
      {% endif %}
    {% endfor %}

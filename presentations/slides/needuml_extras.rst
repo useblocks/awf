@@ -1,153 +1,54 @@
 Needuml Extras
 --------------
-There is one more thing...
+There is more...
 
-Model parameters 1/4
-~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: rst
 
-    .. arch_comp:: Component ???
-       :id: COMP_VAR
+needuml - save
+~~~~~~~~~~~~~~
+Store the final PlantUML code in a file.
 
-       .. needuml::
-
-          {% if variant == "A" %}
-          card "Interface A" as int
-          {% elif variant == "B" %}
-          card "Interface B" as int
-          {% else %}
-          card "Interface X" as int
-          {% endif %}
-
-          card "Function {{name}}" as func
-
-          int --> func
-
-Model parameters 2/4
-~~~~~~~~~~~~~~~~~~~~
-
-.. arch_comp:: Component ???
-   :id: COMP_VAR
+.. code-block::
 
    .. needuml::
+      :save: /arch/system_x.puml
 
-      {% if variant == "A" %}
-      card "Interface A" as int
-      {% elif variant == "B" %}
-      card "Interface B" as int
-      {% else %}
-      card "Interface X" as int
-      {% endif %}
+      {{ flow("COMP_A") }}
+      {{ flow("COMP_B") }}
 
-      card "Function {{name}}" as func
+      comp_a --> comp_b
 
-      int --> func
+`Docs: needuml - save <https://sphinx-needs.readthedocs.io/en/latest/directives/needuml.html#save>`__
 
-Model parameters 3/4
-~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: rst
-
-    .. arch_sys:: System B
-       :id: SYS_B
-
-       This is system **B**
-
-       .. needuml::
-
-          node "System B" as sys_b {
-            {{uml("COMP_VAR", variant="B", name="SYS_B")}}
-          }
-
-          circle "Interface Y" as int_y
-          int_y -> int
-
-Model parameters 4/4
-~~~~~~~~~~~~~~~~~~~~
-
-.. arch_sys:: System B
-   :id: SYS_B
-
-   This is system **B**
-
-   .. needuml::
-
-      node "System B" as sys_b {
-        {{uml("COMP_VAR", variant="B", name="SYS_B")}}
-      }
-
-      circle "Interface Y" as int_y
-      int_y -> int
-
-Documenting Model parameters 1/2
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: rst
-
-    .. arch_comp:: Component ???
-       :id: COMP_VAR2
-
-       .. needuml::
-
-          card "Function {{name}}" as func
-
-          {% if variant == "A" %}
-          card "Interface A.1" as int
-          card "Interface A.2" as int_2
-          int_2 --> func
-          {% elif variant == "B" %}
-          card "Interface B" as int
-          {% else %}
-          card "Interface X" as int
-          {% endif %}
-
-          int -> func
-
-        **For Variant A**:
-
-       .. needuml::
-
-          {{uml('COMP_VAR', variant="A", name="Customer_A")}}
+needuml - debug
+~~~~~~~~~~~~~~~
 
 
-       **For Variant B**:
+.. needuml::
+   :debug:
 
-       .. needuml::
+   {{ flow("REQ_01") }}
 
-          {{uml('COMP_VAR', variant="B", name="Customer_B")}}
+   card "charlie" as ch
+   REQ_01 --> ch
 
-Documenting Model parameters 2/2
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. arch_comp:: Component ???
-   :id: COMP_VAR2
-
-   .. needuml::
-
-      card "Function {{name}}" as func
-
-      {% if variant == "A" %}
-      card "Interface A.1" as int
-      card "Interface A.2" as int_2
-      int_2 --> func
-      {% elif variant == "B" %}
-      card "Interface B" as int
-      {% else %}
-      card "Interface X" as int
-      {% endif %}
-
-      int -> func
-
-   **For Variant A**:
-
-   .. needuml::
-
-      {{uml('COMP_VAR2', variant="A", name="Customer_A")}}
+`Docs: needuml - debug <https://sphinx-needs.readthedocs.io/en/latest/directives/needuml.html#debug>`__
 
 
-   **For Variant B**:
+needuml - filter
+~~~~~~~~~~~~~~~~
+Filter by filter-strings.
 
-   .. needuml::
+.. code-block::
 
-      {{uml('COMP_VAR2', variant="B", name="Customer_B")}}
+   .. arch_comp:: My Component
+      :id: COMP_MY
+
+      .. needuml::
+
+         {% for need in filter("type=='interface' and status!='open'") %}
+            {{flow(need.id)}}
+         {% endfor %}
+
+`Docs: needuml - filter <https://sphinx-needs.readthedocs.io/en/latest/directives/needuml.html#filter-filter-string>`__
+

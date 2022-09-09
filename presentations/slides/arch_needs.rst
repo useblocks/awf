@@ -4,7 +4,7 @@ Need objects representing architecture elements
 
 An Arch Need 1/2
 ~~~~~~~~~~~~~~~~
-Normal need, with ``needuml``
+Normal need, with ``needarch``
 
 .. arch_comp:: Component Blue
    :id: COMP_BLUE
@@ -12,7 +12,7 @@ Normal need, with ``needuml``
 
    This is component Blue!
 
-   .. needuml::
+   .. needarch::
 
       card "Interface A" as int_a
       card "Function X" as func_x
@@ -32,7 +32,7 @@ An Arch Need 2/2
 
        This is component Blue!
 
-       .. needuml::
+       .. needarch::
 
           card "Interface A" as int_a
           card "Function X" as func_x
@@ -50,12 +50,12 @@ Reusing Arch needs
 
    .. needuml::
 
-      {{need('COMP_BLUE')}}
+      {{flow('COMP_BLUE')}}
       {{uml('COMP_BLUE')}}
 
 .. needuml::
 
-   {{need('COMP_BLUE')}}
+   {{flow('COMP_BLUE')}}
    {{uml('COMP_BLUE')}}
 
 Chaining Arch needs 1/4
@@ -70,7 +70,7 @@ Chaining Arch needs 1/4
 
       This is system **Foo**
 
-      .. needuml::
+      .. needarch::
 
          node "System FOO" as foo {
           {{uml("COMP_BLUE")}}
@@ -89,7 +89,7 @@ Chaining Arch needs 2/4
 
    This is system **Foo**
 
-   .. needuml::
+   .. needarch::
 
       node "System FOO" as foo {
         {{uml("COMP_BLUE")}}
@@ -108,7 +108,7 @@ Chaining Arch needs 3/4
        :id: PROD_42
        :status: open
 
-       .. needuml::
+       .. needarch::
 
           {{uml("SYS_FOO")}}
           node "System Bar" as bar
@@ -122,7 +122,7 @@ Chaining Arch needs 4/4
    :id: PROD_42
    :status: open
 
-   .. needuml::
+   .. needarch::
 
       {{uml("SYS_FOO")}}
       node "System Bar" as bar

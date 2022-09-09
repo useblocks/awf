@@ -1,5 +1,5 @@
 sphinx
-git+https://github.com/useblocks/sphinxcontrib-needs@need_arch
+git+https://github.com/useblocks/sphinx-needs
 sphinxcontrib-plantuml
 sphinx-revealjs
 sphinxcontrib-needs

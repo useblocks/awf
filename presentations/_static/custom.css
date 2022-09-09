@@ -11,6 +11,11 @@ body {
 	z-index:1;
 }
 
+li a {
+    color: #839090 !important;
+    font-size: 0.8em;
+}
+
 div.info {
     font-size: 0.6em;
     color: rgba(255,255,255, 0.5);

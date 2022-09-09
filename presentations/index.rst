@@ -18,11 +18,12 @@ Architecture without Frustration
 
 .. include:: slides/slogan.rst
 
-Sphinx-Needs Features
-=====================
+
 .. include:: slides/needuml.rst
-.. include:: slides/arch_needs.rst
 .. include:: slides/needuml_extras.rst
+.. include:: slides/arch_needs.rst
+.. include:: slides/needarch_views.rst
+.. include:: slides/needuml_params.rst
 .. include:: slides/upcoming.rst
 .. include:: slides/thanks.rst
 
